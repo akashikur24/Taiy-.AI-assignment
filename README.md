@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Api's 
+
+Country Specific data of cases: https://disease.sh/v3/covid-19/countries \
+Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+
 ## Available Scripts
 
 In the project directory, you can run:
