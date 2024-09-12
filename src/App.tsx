@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ChartsAndMapsPage from "./pages/ChartsAndMapsPage";
+import Slidebar from "./components/Slidebar";
+import ContactsPage from "./pages/ContactsPage";
+import { Header } from "./components/Header";
+import Aside from "./components/Aside";
 
-function App() {
+const App: React.FC = () => {
+  const [toggle, setToggle] = useState<boolean>(true);
+  const handleToggle = () => setToggle((prev) => !prev);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header setToggle={handleToggle} />
+      <div className="flex h-[calc(100vh-4rem)] bg-gray-100">
+        <Slidebar />
+        <div className="w-5/6 bg-gray-100 relative overflow-y-auto max-sm:w-full">
+          <Routes>
+            <Route path="/" element={<ContactsPage />} />
+            <Route path="/charts-and-maps" element={<ChartsAndMapsPage />} />
+          </Routes>
+        </div>
+      </div>
+      {/* only for the small devices */}
+      {toggle && <Aside setToggle={handleToggle} />}
+    </Router>
   );
-}
+};
 
 export default App;
