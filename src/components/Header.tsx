@@ -17,13 +17,13 @@ export const Header: React.FC<ToogleProp> = ({ setToggle }) => {
   };
 
   return (
-    <div className="header h-16 bg-blue-600 w-full flex justify-center items-center max-sm:justify-around">
+    <div className="header h-16 bg-blue-600 relative flex items-center justify-center">
       <MenuIcon
         color="white"
-        className="hidden cursor-pointer max-sm:block"
+        className="absolute top-4 left-4 hidden cursor-pointer max-md:block "
         onClick={() => setToggle((prev) => !prev)}
       />
-      <h1 className="text-2xl font-semibold text-white">
+      <h1 className="text-2xl text-center  font-semibold text-white max-md:text-xl">
         {getTitle(location.pathname)}
       </h1>
     </div>

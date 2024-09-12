@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <Header setToggle={handleToggle} />
       <div className="flex h-[calc(100vh-4rem)] bg-gray-100">
         <Slidebar />
-        <div className="w-5/6 bg-gray-100 relative overflow-y-auto max-sm:w-full">
+        <div className="w-5/6 bg-gray-100 relative overflow-y-auto max-md:w-full">
           <Routes>
             <Route path="/" element={<ContactsPage />} />
             <Route path="/charts-and-maps" element={<ChartsAndMapsPage />} />

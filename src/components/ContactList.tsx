@@ -15,8 +15,8 @@ const ContactList: React.FC<ContactListProps> = ({ onEdit, onView }) => {
 
   if (contacts.length === 0) {
     return (
-      <div className="w-1/2 border-2 border-black p-3 max-sm:w-[80%]">
-        <p className="text-xl">
+      <div className="w-1/2 border-2 p-3 max-sm:w-[80%]">
+        <p className="text-xl text-gray-500 max-md:text-lg">
           No Contact Found. Please add a contact from the Create Contact Form.
         </p>
       </div>

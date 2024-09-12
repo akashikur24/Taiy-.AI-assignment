@@ -27,8 +27,8 @@ const MapComponent: React.FC = () => {
 
   return (
     <>
-      <h1 className="text-center text-xl font-semibold mb-4">Map</h1>
-      <div className="relative w-full h-80 md:h-[calc(100vh-5rem)] z-0">
+      <h1 className="text-center text-xl font-semibold mb-2">Map</h1>
+      <div className="relative mb-10 px-3  w-full h-80 md:h-[calc(100vh-15rem)] z-0">
         <MapContainer
           center={[20, 0]}
           zoom={2}

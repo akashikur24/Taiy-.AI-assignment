@@ -31,7 +31,7 @@ const ContactsPage: React.FC = () => {
       <div>
         <button
           onClick={() => setModal(true)}
-          className="py-4 px-9 border-2 rounded-md hover:bg-slate-400 hover:text-white text-xl max-sm:py-2 max-sm:text-lg"
+          className="py-2 px-9 border-2 rounded-md transition-all  hover:bg-slate-400 hover:text-white text-xl max-md:py-2 max-md:text-lg "
         >
           Create Contact
         </button>

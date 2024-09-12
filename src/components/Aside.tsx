@@ -8,7 +8,7 @@ const Aside: React.FC<ToogleProp> = ({ setToggle }) => {
   //to style the active nav Item
   const location = useLocation();
   return (
-    <nav className="w-3/4 z-50 h-full absolute top-0 p-4 bg-white border-x-2 border-gray-400 sm:hidden">
+    <nav className="w-3/4 z-50 h-full absolute top-0 p-4 bg-white border-x-2 border-gray-400 md:hidden">
       <X
         onClick={() => setToggle((prev) => !prev)}
         className="cursor-pointer"
